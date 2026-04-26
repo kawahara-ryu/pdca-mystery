@@ -1,7 +1,7 @@
 const pdcaData = {
   prologue: {
     text: "ある日のPDCA探偵局。依頼人の「一匹狼（※完全室内飼い）」が泣きついてきた。\\n『学園のWi-Fiが遅すぎて、授業の動画が全然見られないニャ！...いや、見られないガルル！探偵さん、なんとかしてほしいガル！』",
-    image: "file:///C:/Users/ryuto/.gemini/antigravity/brain/f90357b8-79ae-45cf-be1d-1a4f2a020646/cute_wolf_cat_client_1777194125412.png"
+    image: "./cute_wolf_cat.png"
   },
   investigation: {
     description: "まずは依頼人から情報を集めよう。気になる箇所をクリックして手がかりを探すのだ。",
