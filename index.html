@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDCA探偵局</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        
+        <!-- Title Screen -->
+        <div id="title-screen" class="screen active">
+            <h1 class="glitch-text" data-text="PDCA探偵局">PDCA探偵局</h1>
+            <p class="subtitle">情報社会のトラブルを解決せよ！</p>
+            <button id="start-btn" class="detective-btn">調査開始 (START)</button>
+        </div>
+
+        <!-- Prologue Screen -->
+        <div id="prologue-screen" class="screen">
+            <h2 class="folder-title">【CASE FILE: 学園ネットワーク遅延事件】</h2>
+            <div class="image-frame">
+                <img id="prologue-image" src="" alt="Client">
+            </div>
+            <div class="dialogue-box">
+                <p id="prologue-text"></p>
+            </div>
+            <button id="to-investigate-btn" class="detective-btn mt-20">情報収集(聞き込み)へ</button>
+        </div>
+
+        <!-- Investigation Screen -->
+        <div id="investigation-screen" class="screen">
+            <h2 class="folder-title">【INVESTIGATION: 証拠集め】</h2>
+            <p id="investigation-desc" class="phase-desc"></p>
+            
+            <div id="spots-container" class="cards-container">
+                <!-- Investigation spots dynamically inserted here -->
+            </div>
+            
+            <div id="investigation-feedback" class="dialogue-box mt-20 hidden">
+                <p id="investigation-feedback-text"></p>
+            </div>
+            
+            <button id="to-phase-btn" class="detective-btn mt-20 hidden">十分な証拠が集まった。PDCAサイクルを回す！</button>
+        </div>
+
+        <!-- Phase Screen -->
+        <div id="phase-screen" class="screen">
+            <div class="status-bar">
+                <div class="phase-indicator" id="ind-plan">P</div>
+                <div class="phase-indicator" id="ind-do">D</div>
+                <div class="phase-indicator" id="ind-check">C</div>
+                <div class="phase-indicator" id="ind-action">A</div>
+            </div>
+
+            <h2 id="phase-title" class="phase-title">Phase</h2>
+            <p id="phase-desc" class="phase-desc">Description</p>
+
+            <div id="cards-container" class="cards-container">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Feedback Modal -->
+        <div id="feedback-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="feedback-title">Result</h2>
+                <p id="feedback-text">Feedback text goes here.</p>
+                <button id="feedback-next-btn" class="detective-btn mt-20">次へ</button>
+            </div>
+        </div>
+
+        <!-- Clear Screen -->
+        <div id="clear-screen" class="screen">
+            <h1 class="clear-title">CASE CLOSED</h1>
+            
+            <div class="rank-box mt-20">
+                <h2>最終評価</h2>
+                <p>探偵ポイント: <span id="final-points">100</span> / 100</p>
+                <div class="rank-display" id="final-rank">S</div>
+            </div>
+
+            <div class="dialogue-box mt-20">
+                <p id="epilogue-text"></p>
+            </div>
+            
+            <div class="password-box mt-20">
+                <p>Google Classroomの解答に以下の「あいことば」を入力してください。</p>
+                <h2 id="secret-word"></h2>
+            </div>
+            
+            <button id="home-btn" class="detective-btn mt-20">探偵局へ戻る</button>
+        </div>
+
+    </div>
+
+    <script src="pdca_data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
